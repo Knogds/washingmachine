@@ -1,12 +1,14 @@
-
+# Running a washing machine with a STM32 microcontroller.
 (translated from Croatian)
 
 See it in action:
 https://www.youtube.com/watch?v=UbFBQqC3rqQ
 
-To understand the code: everything happens in washingmachine.c: systick handler.
+To understand the code: everything happens in
 
-Do not use the port: A9
+washingmachine.c: systick handler.
+
+Do not use the port A9!
 
 The TRIAC turns on by sending a short pulse:
                                                                                    
@@ -20,6 +22,7 @@ of polarity of the AC.
 The LCD I use is ILI9340:
 - http://tech.scargill.net/an-arduino-terminal/
 - code: https://bitbucket.org/scargill/experimental-terminal
+
 
 ```
 LCD	<-->	MBO	(Default alt.funct.)
@@ -36,21 +39,18 @@ LED         3.3+100_OHM resistor
 ```
 
 
-
-
 gdje poceti?
+
 sve se odvija u
 
 washingmachine.c: sys_tick_handler
 
-NE KORISTI PORTOVE:
-A9
+NE KORISTI PORT A9!
 
 TRIAC se ukljucuje tako da se salje kratki impuls:
 
 za najmanu vrijednost - neposredno prije nulte tocke AC
 za najvecu vrijednost - neposredno poslije nulte tocke AC
-
 
 Impuls treba biti sto kraci jer ako se cijelo vrijeme drzi ukljucen sa strane
 mikrokontrollera, onda se bespotrebno zagrijava. Triac se iskljucuje sam od
