@@ -4,7 +4,7 @@
 See it in action:
 https://www.youtube.com/watch?v=UbFBQqC3rqQ
 
-To understand the code: everything happens in
+To understand the code, everything happens in:
 
 washingmachine.c: systick handler.
 
@@ -13,15 +13,14 @@ Do not use the port A9!
 The TRIAC turns on by sending a short pulse:
                                                                                    
 for the smallest value - immediately before the zero point AC
+
 for the highest value - immediately after the zero point AC
                                                                                  
-The impulse should be as short as possible because if it is too long, then it
-heats up unnecessarily. The triac turns off by itself itself with each change
-of polarity of the AC.
+The impulse should be as short as possible because if it is too long, then the
+triac heats up unnecessarily. The triac turns off by itself itself with each
+change of polarity of the AC.
                                                                                 
-The LCD I use is ILI9340:
-- http://tech.scargill.net/an-arduino-terminal/
-- code: https://bitbucket.org/scargill/experimental-terminal
+The LCD display used in the project is ILI9340.
 
 
 ```
@@ -50,13 +49,12 @@ NE KORISTI PORT A9!
 TRIAC se ukljucuje tako da se salje kratki impuls:
 
 za najmanu vrijednost - neposredno prije nulte tocke AC
+
 za najvecu vrijednost - neposredno poslije nulte tocke AC
 
 Impuls treba biti sto kraci jer ako se cijelo vrijeme drzi ukljucen sa strane
 mikrokontrollera, onda se bespotrebno zagrijava. Triac se iskljucuje sam od
 sebe prilikom svake promjene polariteta izmjenicne struje.
 
-LCD koji koristim je ILI9340:
-- http://tech.scargill.net/an-arduino-terminal/
-- kod: https://bitbucket.org/scargill/experimental-terminal
+LCD koji koristim je ILI9340.
 
