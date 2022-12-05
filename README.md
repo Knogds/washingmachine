@@ -1,6 +1,9 @@
 
 (translated from Croatian)
 
+See it in action:
+https://www.youtube.com/watch?v=UbFBQqC3rqQ
+
 To understand the code: everything happens in washingmachine.c: systick handler.
 
 Do not use the port: A9
@@ -20,7 +23,6 @@ The LCD I use is ILI9340:
 
 
 LCD	<-->	MBO	(Default alt.funct.)
---------------------------------------------
 SCK         A5 SPI1_SCK
 SDO(MISO)   A6 SPI1_MISO
 SDI(MOSI)	A7 SPI1_MOSI
@@ -33,7 +35,6 @@ VCC         3.3
 LED         3.3+100_OHM resistor
 
 
-...
 
 
 gdje poceti?
@@ -41,11 +42,9 @@ sve se odvija u
 
 washingmachine.c: sys_tick_handler
 
-----------------------------------------
-
 NE KORISTI PORTOVE:
 A9
--------------------
+
 TRIAC se ukljucuje tako da se salje kratki impuls:
 
 za najmanu vrijednost - neposredno prije nulte tocke AC
