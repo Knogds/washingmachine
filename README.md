@@ -21,7 +21,7 @@ The LCD I use is ILI9340:
 - http://tech.scargill.net/an-arduino-terminal/
 - code: https://bitbucket.org/scargill/experimental-terminal
 
-
+```
 LCD	<-->	MBO	(Default alt.funct.)
 SCK         A5 SPI1_SCK
 SDO(MISO)   A6 SPI1_MISO
@@ -33,6 +33,7 @@ CS          B10
 GND         GND
 VCC         3.3
 LED         3.3+100_OHM resistor
+```
 
 
 
